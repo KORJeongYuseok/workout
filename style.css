@@ -14,6 +14,12 @@
 #article {
   padding-left: 25px;
 }
+
+#article .leg, .chest, .shoulder, .back, .triceps, .biceps, .abs{
+  display: none;
+}
+
+
 ul, li {
   margin: 0;
 }
@@ -69,9 +75,15 @@ a {
     padding-left: 25px;
   }
 
+  #article .leg, .chest, .shoulder, .back, .triceps, .biceps, .abs {
+    display: none;
+  }
+
   #article iframe {
     width: 100%
   }
+
+
 
   ul, li {
     margin: 0;
