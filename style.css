@@ -39,6 +39,7 @@ a {
 }
 
 
+
 @media(max-width:800px) {
   #grid {
       display: block;
@@ -67,6 +68,11 @@ a {
   #article {
     padding-left: 25px;
   }
+
+  #article iframe {
+    width: 100%
+  }
+
   ul, li {
     margin: 0;
   }
