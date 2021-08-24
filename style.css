@@ -31,15 +31,13 @@ a {
 
 #list .part {
   list-style: none;
+  color: black;
 }
 #list .part > a{
   font-size: 16px;
-  color: blue;
+  color: black;
 }
 
-.chest_main {
-  width: 40%;
-}
 
 @media(max-width:800px) {
   #grid {
@@ -59,9 +57,10 @@ a {
     float: left;
     margin-right: 15px;
   }
+
   #list .part > a{
     font-size: 16px;
-    color: blue;
+    color: black;
     width: 100%;
   }
 
@@ -84,8 +83,5 @@ a {
     }
 
 
-  .chest_main {
-    width: 40%;
-  }
 
 }
