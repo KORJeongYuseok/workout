@@ -5,11 +5,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script>
+  function nightDayHandler(self){
+  var target = document.querySelector('body')
+  if(self.value === 'night') {
+    target.style.backgroundColor='black'
+    target.style.color='white'
+    self.value='day'
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+       alist[i].style.color='white';
+       i = i+ 1
+      }
+  } else {
+    target.style.backgroundColor= 'white'
+    target.style.color= 'black'
+    self.value='night'
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+     alist[i].style.color='black';
+     i = i+ 1
+    }
 
+  }
+  }
+
+  function hideShowDiv(){
+    var target = document.querySelector('.routine')
+    if(target.style.display === 'none'){
+    target.style.display='block'
+    } else {
+    target.style.display='none'
+    }
+  }
+
+  </script>
 </head>
 
 <body>
+  <h2>주야간모드</h2>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
   <h1><a href="index.html">부위별 운동</a></h1>
+
   <div id="grid">
     <div id=list>
       <ul>
@@ -25,77 +66,36 @@
 
     <div id="article">
       <h2>운동 루틴</h2>
-      <input type="button" value="다리" onclick="
-      if(document.querySelector('.leg').value === '다리'){
-      document.querySelector('.leg').style.display='block'
-      document.querySelector('.leg').value='다리루틴'
-      } else {
-      document.querySelector('.leg').style.display='none'
-      document.querySelector('.leg').value='다리'
-      }
+
+      <input class="routinebtn" type="button" value="가슴" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="가슴" onclick="
-      if(document.querySelector('.chest').value === '가슴'){
-      document.querySelector('.chest').style.display='block'
-      document.querySelector('.chest').value='가슴루틴'
-      } else {
-      document.querySelector('.chest').style.display='none'
-      document.querySelector('.chest').value='가슴'
-      }
+      <input class="routinebtn" type="button" value="다리" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="어깨" onclick="
-      if(document.querySelector('.shoulder').value === '어깨'){
-      document.querySelector('.shoulder').style.display='block'
-      document.querySelector('.shoulder').value='어깨루틴'
-      } else {
-      document.querySelector('.shoulder').style.display='none'
-      document.querySelector('.shoulder').value='어깨'
-      }
+      <input class="routinebtn" type="button" value="등" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="등" onclick="
-      if(document.querySelector('.back').value === '등'){
-      document.querySelector('.back').style.display='block'
-      document.querySelector('.back').value='등루틴'
-      } else {
-      document.querySelector('.back').style.display='none'
-      document.querySelector('.back').value='등'
-      }
+      <input class="routinebtn" type="button" value="어깨" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="삼두" onclick="
-      if(document.querySelector('.triceps').value === '삼두'){
-      document.querySelector('.triceps').style.display='block'
-      document.querySelector('.triceps').value='삼두루틴'
-      } else {
-      document.querySelector('.triceps').style.display='none'
-      document.querySelector('.triceps').value='삼두'
-      }
+      <input class="routinebtn" type="button" value="삼두" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="이두" onclick="
-      if(document.querySelector('.biceps').value === '이두'){
-      document.querySelector('.biceps').style.display='block'
-      document.querySelector('.biceps').value='이두루틴'
-      } else {
-      document.querySelector('.biceps').style.display='none'
-      document.querySelector('.biceps').value='이두'
-      }
+      <input class="routinebtn" type="button" value="이두" onclick="
+      hideShowDiv()
       ">
 
-      <input type="button" value="복근" onclick="
-      if(document.querySelector('.abs').value === '복근'){
-      document.querySelector('.abs').style.display='block'
-      document.querySelector('.abs').value='복근루틴'
-      } else {
-      document.querySelector('.abs').style.display='none'
-      document.querySelector('.abs').value='복근'
-      }
+      <input class="routinebtn" type="button" value="복근" onclick="
+      hideShowDiv()
       ">
 
-      <div class='leg'>
+      <div class='routine'>
       <h3>다리운동 루틴</h3>
       <ol>
         <li>스쿼트 8세트</li>
@@ -105,7 +105,7 @@
       </ol>
       </div>
 
-      <div class='chest'>
+      <div class='routine'>
       <h3>가슴운동 루틴</h3>
       <ol>
         <li>벤치프레스 8세트</li>
@@ -115,7 +115,7 @@
       </ol>
       </div>
 
-      <div class='shoulder'>
+      <div class='routine'>
       <h3>어깨운동 루틴</h3>
       <ol>
         <li>밀리터리프레스 8세트</li>
@@ -125,7 +125,7 @@
       </ol>
       </div>
 
-      <div class='back'>
+      <div class='routine'>
       <h3>등운동 루틴</h3>
       <ol>
         <li>풀업 8세트</li>
@@ -135,7 +135,7 @@
       </ol>
       </div>
 
-      <div class='triceps'>
+      <div class='routine'>
       <h3>삼두운동 루틴</h3>
       <ol>
         <li>라잉트라이셉스 익스텐션 8세트</li>
@@ -144,7 +144,7 @@
       </ol>
       </div>
 
-      <div class='biceps'>
+      <div class='routine'>
       <h3>이두운동 루틴</h3>
       <ol>
         <li>바벨컬 8세트</li>
@@ -154,7 +154,7 @@
       </ol>
       </div>
 
-      <div class='abs'>
+      <div class='routine'>
       <h3>복근운동 루틴</h3>
       <ol>
         <li>행잉레그레이즈 8세트</li>
@@ -163,6 +163,8 @@
         <li>싯업 4세트</li>
       </ol>
       </div>
+
+      
       <h2>요일별 운동루틴</h2>
       <ul>
       <li>월요일: 다리, 등, 복근</li>
@@ -179,13 +181,7 @@
         <li>웨이트 운동시간: 1시간 30분, 유산소 30분</li>
       </ol>
 
-      <div id="mental">
-        <h2>멘탈 훈련</h2>
-        <input type="button" value="운동하기 귀찮나요?" onclick="alert('하세요 그냥')">
-        <input type="button" value="먹고 싶은 게 있나요?" onclick="alert('스쿼트 10세트 하고 드세요')">
-        <input type="button" value="일단 하세요" onclick="alert('빨리 하세요')"
-      </div>
-    </div>
+
 
 
   </div>

@@ -15,7 +15,7 @@
   padding-left: 25px;
 }
 
-#article .leg, .chest, .shoulder, .back, .triceps, .biceps, .abs{
+#article .routine{
   display: none;
 }
 
