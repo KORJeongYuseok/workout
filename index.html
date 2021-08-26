@@ -5,43 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script>
-  function nightDayHandler(self){
-  var target = document.querySelector('body')
-  if(self.value === 'night') {
-    target.style.backgroundColor='black'
-    target.style.color='white'
-    self.value='day'
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-       alist[i].style.color='white';
-       i = i+ 1
-      }
-  } else {
-    target.style.backgroundColor= 'white'
-    target.style.color= 'black'
-    self.value='night'
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-     alist[i].style.color='black';
-     i = i+ 1
-    }
-
-  }
-  }
-
-  function hideShowDiv(){
-    var target = document.querySelector('.routine')
-    if(target.style.display === 'none'){
-    target.style.display='block'
-    } else {
-    target.style.display='none'
-    }
-  }
-
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="color.js"></script>
 </head>
 
 <body>
@@ -164,7 +129,7 @@
       </ol>
       </div>
 
-      
+
       <h2>요일별 운동루틴</h2>
       <ul>
       <li>월요일: 다리, 등, 복근</li>
