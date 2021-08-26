@@ -37,11 +37,12 @@ if(self.value === 'night') {
 }
 }
 
-function hideShowDiv(){
-  var target = document.querySelector('.routine')
-  if(target.style.display === 'none'){
-  target.style.display='block'
-  } else {
-  target.style.display='none'
-  }
+function hideShowDiv(part){
+  // var target = document.querySelector(part)
+  // if(target.style.display === 'none'){
+  // target.style.display='block'
+  // } else {
+  // target.style.display='none'
+  // }
+  $(part).toggle()
 }
