@@ -44,5 +44,5 @@ function hideShowDiv(part){
   // } else {
   // target.style.display='none'
   // }
-  $(part).toggle()
+  $(part).toggle();
 }
